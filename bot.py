@@ -1828,7 +1828,7 @@ def build_category_pie_chart(rows):  # [CHG] вертикальная карти
     ax.set_facecolor(bg)  # [NEW]
 
     def slice_label(pct):  # [NEW] мелкие сектора не подписываем, чтобы не наслаивался текст
-        return f"{pct:.0f}%" if pct >= 3 else ""  # [CHG] порог чуть выше: крупные цифры читаются лучше
+        return f"{pct:.0f}%" if pct >= 5 else ""  # [CHG] порог чуть выше: крупные цифры читаются лучше
 
     wedges, _, autotexts = ax.pie(  # [CHG] кольцо с зазорами между секторами
         values,
